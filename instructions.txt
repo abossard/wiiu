@@ -1,0 +1,91 @@
+Instructions:
+
+*note* If Windows defender interupts the unzipping of these files then turn of windows defender real-time protection
+       and unzip again. The actual exploit payloads are thought to be viruses by windows defender. Or just add an exception inside of your anti virus
+
+*note2* If you can't get any of the self hosting to work then try browsing this site on your wii u. Its the same site just online:
+http://107.170.0.56/
+
+1. Install XAMPP to a local PC on the same local network that the Wii U is on
+   (xampp installer included in the "PC Software" folder)
+2. Browse to c:\xampp\htdocs\
+3. Create a folder called "wiibrew"
+4. Copy everything INSIDE of folder "www" into the folder: c:\xampp\htdocs\wiibrew
+   Folder should look like:	
+   - c:\xampp\htdocs\wiibrew\cafiine\...
+                            \dumpiine\...
+                            \hbl\...
+                            \kexploit\...
+                            \res\...
+                            index.html
+                            menu.json
+                            menu.json.txt
+5. Copy everyting INSIDE of folder "SD Card" to the root of your SD card overwriting files when prompted.
+   SD card should look like:
+   - SD:\wiiu\apps\...
+             \coverM\...
+             \discM\...
+             \games\... (put your loadiine ready games in here)
+             \saves\...
+6. Put SD card back in WiiU
+7. Turn on Apache in XAMPP
+8. Test website on local PC by opening a browser (Chrome or another) and go to:
+   localhost/wiibrew
+9. If you cannot see the webpage on your local PC then you may have a port issue with XAMPP. Post
+   in gbatemp thread with issues. You must have the xampp page working before you can test on Wii U.
+10. 10. Learn your local PC's IP address and use that in the next step.
+11. Open your Wii U and open the browser. Click on settings in the upper right corner. Click "Reset Save Data". Now browse the webpage:
+    http://192.168.0.67(replace with your computer IP)/wiibrew
+    For example, on my Wii U I type this into the address:
+    http://192.168.11.169/wiibrew
+12. You can launch Homebrewbrew launcher or Loadiine. You should only need to click once.
+13. If you want to launch any of the other Homebrew then you will need to run the #1 or #2 kexploit first (each app tells you which one to load first). 
+14. Tap the browser button and go back to your page and then launch any of the apps listed below the kexploits.
+
+*note* If you change the port number in xampp to make it work then you need to include that in the URL
+example:
+Changed port to "12345". The address I use in Wii U browser is:
+http://192.168.11.169:12345/wiibrew
+
+*note2* If you would like to make shortcuts to direct payloads then type this into your bookmark:
+http://xxx.xxx.xxx.xxx/(www folder name)/HBL/(payload file)
+
+So in my examples above I would type this into my 5.5.1 Wii U to bookmark for HBL direct loading:
+http://192.168.11.169:12345/wiibrew/hbl/index.php
+
+Here are all the payload links:
+
+Direct Homebrew Launcher:
+hbl/index.php = 5.5.0 and 5.5.1 users
+hbl/540hbl.mp4 = 5.4.0 users
+hbl/payload532.html = 5.3.2 users
+
+Direct Loadiine GX2 0.3 launcher:
+loadiinegx2/index.php = 5.5.0 and 5.5.1 users
+loadiinegx2/540loadiine.mp4 = 5.4.0 users
+loadiinegx2/payload532.html = 5.3.2 users
+
+Loadiine Ready Kexploit:
+kexploit/loadindex.php = 5.5.0 and 5.5.1 users
+kexploit/540kexploit10.mp4 = 5.4.0 users
+kexploit/532kex10/payload532.html = 5.3.2 users
+
+NON Loadiine Kexploit:
+kexploit/nonindex.php = 5.5.0 and 5.5.1 users
+kexploit/540kexploit31.mp4 = 5.4.0 users
+kexploit/532kex31/payload532.html = 5.3.2 users
+
+*note3*
+
+If you want to trick your Wii U into loading the same page every time that you open the browser follow these steps:
+
+1. Let's say I want to load the HBL direct launch every time that I open my 5.5.1 Wii U browser. First turn off your server. (or just turn off wifi)
+2. Open the browser and type in the direct link for your exploit (in my case "http://192.168.11.169:12345/Wiibrew/HBL/index.php")
+3. The page will fail (if you have your webserver off or ethernet disconnected or wifi turned off)
+4. Press the Home button
+5. Press Wii U Menu
+6. Open Mii Maker and let it load.
+7. Exit Mii Maker with the button in the bottom left
+
+Now every time you open your browser it will go to that link immediatly. You can cancel this by following the same steps for a different link.
+
